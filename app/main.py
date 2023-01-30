@@ -1,13 +1,18 @@
 from fastapi import FastAPI
 from app.routers import carriers, packages
 import typing as t
+from app.database import engine, Base, metadata
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(dependencies=[])
 
 app.include_router(carriers.router)
 app.include_router(packages.router)
+metadata.create_all(engine)
 
 
+# Dependency
 @app.get("/")
 async def root() -> t.Any:
     return {"message": "Hello Bigger Applications!"}

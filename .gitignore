@@ -1,3 +1,5 @@
 app.egg-info/
 build/
 .mypy_cache/
+sql_app.db
+venv/

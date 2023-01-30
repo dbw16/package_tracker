@@ -1,4 +1,4 @@
-pre-commit
+pre - commit
 uvicorn[standard]
 mypy
 black

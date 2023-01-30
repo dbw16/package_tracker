@@ -1,4 +1,5 @@
 fastapi
 pydantic
 pydantic[email]
-python-multipart
+python - multipart
+sqlalchemy >= 2
